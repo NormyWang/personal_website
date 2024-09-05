@@ -1,0 +1,16 @@
+query getRecommendations($input: UserInputType!) {
+  getRecommendations(input: $input) {
+    products {
+      name
+      price
+      url
+      explanation
+    }
+    notRecommendedProducts {
+      name
+      price
+      url
+      explanation
+    }
+  }
+}
