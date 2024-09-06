@@ -1,12 +1,11 @@
 <template>
   <div class="about-me">
-    <!-- Remove the nav element entirely -->
-
+    
     <div class="hero-section" id="About">
       <div class="container mx-auto px-4 flex items-center">
-        <img src="/my-picture.jpg" alt="Qing Wang" class="rounded-full w-32 h-32 mr-8">
+        <img src="/my-picture.jpg" alt="Normy Wang" class="rounded-full w-32 h-32 mr-8">
         <div>
-          <h1 class="text-4xl font-bold text-indigo-900 mb-2">Qing Wang</h1>
+          <h1 class="text-4xl font-bold text-indigo-900 mb-2">Normy Wang</h1>
           <p class="text-lg text-indigo-700 mb-4">Pharma & Biotech Professional, Aspiring Coder and AI Enthusiast, Culinary Explorer</p>
           <p class="text-md text-indigo-600 max-w-2xl">Bridging the gap between bioprocess engineering and modern programming techniques to drive innovation in sustainable technologies.</p>
         </div>
