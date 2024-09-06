@@ -12,3 +12,11 @@
     import Header from '@/components/Header.vue';
     import Footer from '@/components/Footer.vue';
     </script>
+
+    <style scoped>
+    @media (max-width: 640px) {
+      main {
+        padding-top: 5rem;
+      }
+    }
+    </style>
