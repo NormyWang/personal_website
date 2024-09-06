@@ -1,24 +1,34 @@
 <template>
-  <header class="bg-indigo-700 text-white">
-    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center space-x-4">
-        <img src="/profile-picture.jpeg" alt="Normy Wang" class="h-10 w-10 rounded-full">
-        <h1 class="text-xl font-semibold">Normy Wang</h1>
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50 h-[var(--header-height)]">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="/profile-picture.jpeg" alt="Normy Wang" class="w-10 h-10 rounded-full mr-3">
+        <span class="text-xl font-semibold text-gray-800">Normy Wang</span>
       </div>
-      <nav class="hidden md:block">
-        <ul class="flex space-x-6">
-          <li><NuxtLink to="/" class="hover:text-indigo-200 transition duration-300">Home</NuxtLink></li>
-          <li><NuxtLink to="/about" class="hover:text-indigo-200 transition duration-300">About</NuxtLink></li>
-          <li><NuxtLink to="/projects" class="hover:text-indigo-200 transition duration-300">Projects</NuxtLink></li>
-          <li><NuxtLink to="/cooking" class="hover:text-indigo-200 transition duration-300">Cooking</NuxtLink></li>
-          <li><NuxtLink to="/germany" class="hover:text-indigo-200 transition duration-300">Living in Germany</NuxtLink></li>
-          <li><NuxtLink to="/contact" class="hover:text-indigo-200 transition duration-300">Contact</NuxtLink></li>
-        </ul>
-      </nav>
+      <div class="space-x-4">
+        <NuxtLink v-for="(link, name) in navLinks" :key="name" :to="link" class="text-gray-600 hover:text-indigo-600">
+          {{ name }}
+        </NuxtLink>
+      </div>
     </div>
-  </header>
+  </nav>
 </template>
 
 <script setup>
-// No additional script needed for this component
+import { ref } from 'vue'
+
+const navLinks = ref({
+  Home: '/',
+  About: '/about',
+  Projects: '/projects',
+  Cooking: '/cooking',
+  'Living in Germany': '/germany',
+  FAQ: '/FAQ'
+})
 </script>
+
+<style>
+:root {
+  --header-height: 4rem; /* Adjust this value based on your header's actual height */
+}
+</style>

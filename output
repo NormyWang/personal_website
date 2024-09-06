@@ -1,0 +1,12 @@
+/Users/qingwang/learning/personal_website/pages
+├── about.vue
+├── contact.vue
+├── cooking
+│   ├── 1.vue
+│   └── index.vue
+├── cooking.vue
+├── germany.vue
+├── index.vue
+└── projects.vue
+
+2 directories, 8 files

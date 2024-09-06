@@ -1,7 +1,7 @@
 <template>
       <div class="flex flex-col min-h-screen">
         <Header />
-        <main class="flex-grow">
+        <main class="flex-grow pt-[var(--header-height)]">
           <slot></slot>
         </main>
         <Footer />
