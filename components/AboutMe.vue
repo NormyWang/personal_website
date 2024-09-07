@@ -6,8 +6,8 @@
         <img src="/my-picture.jpg" alt="Normy Wang" class="rounded-full w-32 h-32 mr-8">
         <div>
           <h1 class="text-4xl font-bold text-indigo-900 mb-2">Normy Wang</h1>
-          <p class="text-lg text-indigo-700 mb-4">Pharma & Biotech Professional, Aspiring Coder and AI Enthusiast</p>
-          <p class="text-md text-indigo-600 max-w-2xl">Leveraging bioprocess engineering expertise while learning modern coding and AI techniques to explore innovations in virus research and sustainable biotech solutions.</p>
+          <p class="text-lg text-indigo-700 mb-4">Biotech Professional, Aspiring Coder and AI Enthusiast</p>
+          <p class="text-md text-indigo-600 max-w-2xl">Leveraging biotech expertise while learning coding and AI techniques to explore new possibilities in technology and digital solutions.</p>
         </div>
       </div>
     </div>
@@ -16,10 +16,10 @@
       <section id="Background" class="mb-12 bg-white bg-opacity-75 rounded-lg shadow-lg p-8 transition-all hover:shadow-xl">
         <h2 class="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">Background</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">
-          I completed my master's in Chemical Energy Engineering, but my career took a different path. After my studies, I worked as a technical assistant at a Virus Research Institute, where I specialized in laboratory techniques, focusing on the development and purification of virus production methods. My work involved hands-on experience in various biotechnological processes, particularly in viral research.
+          With a background in Chemical Energy Engineering and experience in virus research, I'm now embarking on a journey into the world of coding and AI. My previous work at a Virus Research Institute provided me with hands-on experience in biotechnological processes, particularly in viral research and production methods.
         </p>
         <p class="mb-6 text-gray-700 leading-relaxed">
-          Currently, I am learning coding and exploring bioinformatics, with a strong interest in integrating AI tools to enhance research efficiency. My future goal is to combine my experience in virus research with my growing programming skills to contribute to innovative biotech solutions, focusing on sustainable technologies and advancements in the pharmaceutical field.
+          Currently, I'm focusing on learning coding and exploring AI applications. I'm particularly interested in applying these new skills to create social media tools and build websites as a way to practice and develop my abilities. My goal is to gain proficiency in programming and AI, aiming to eventually bridge the gap between my biotech experience and the digital world.
         </p>
       </section>
       
@@ -91,11 +91,7 @@
       <section id="Future" class="mt-12 bg-white rounded-lg shadow-lg p-8 transition-all hover:shadow-xl">
         <h2 class="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">Future Goals</h2>
         <p class="text-gray-700 leading-relaxed">
-          My aim is to further integrate AI and machine learning techniques into bioinformatics and virus research, 
-          focusing on developing predictive models for genomic data analysis and virus-host interactions. I'm keen on 
-          exploring the potential of computational biology in enhancing our understanding of viral mechanisms and 
-          accelerating the development of antiviral strategies. Additionally, I aspire to contribute to the field of 
-          personalized medicine by leveraging bioinformatics tools to analyze large-scale biological datasets.
+          My aim is to continue developing my skills in coding and AI applications. I'm particularly interested in gaining proficiency in programming languages and understanding how AI can be applied in various fields. By leveraging my background in biotech and building new expertise in programming and AI, I hope to eventually contribute to innovative digital solutions that could benefit the scientific community or have wider applications.
         </p>
       </section>
     </div>
@@ -131,14 +127,14 @@ const education = ref([
 ])
 
 const skills = ref([
-  { name: 'Chemical Engineering', level: 80, icon: '🧪' },
   { name: 'Bioprocess Research', level: 90, icon: '🧬' },
   { name: 'Laboratory Techniques', level: 90, icon: '🔬' },
-  { name: 'Virus Production & Purification', level: 85, icon: '🦠' },
+  { name: 'Virus Production', level: 85, icon: '🦠' },
   { name: 'Project Coordination', level: 75, icon: '📊' },
   { name: 'SOP Documentation', level: 80, icon: '📝' },
-  { name: 'Prompt Engineering', level: 70, icon: '🤖' },
-  { name: 'Programming', level: 50, icon: '💻' },
+  { name: 'Programming', level: 30, icon: '💻' },
+  { name: 'AI Concepts', level: 25, icon: '🤖' },
+  { name: 'Prompt Engineering', level: 40, icon: '✍️' },
 ])
 
 const workExperience = ref([
@@ -147,14 +143,12 @@ const workExperience = ref([
     company: 'Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg',
     period: '10.2019 – 05.2023',
     responsibilities: [
-      'Supported the development of innovative methods for virus production and purification, working on both upstream and downstream processes.',
-      'Operated virus laboratory and analysis instruments, ensuring accurate experimental data and results.',
-      'Coordinated laboratory cleaning and testing requirements, liaising with internal teams and external partners.',
-      'Assisted in drafting and updating Standard Operating Procedures (SOPs) and other essential laboratory documentation.',
-      'Managed laboratory inventory, including ordering necessary equipment, consumables, and office supplies.',
-      'Provided guidance and supervision to internship students, ensuring smooth lab integration and understanding of procedures.',
-      'Trained new colleagues in laboratory protocols and safety practices, ensuring a well-organized and efficient working environment.',
-      'Collaborated with internal and external partners to schedule and coordinate experiments, ensuring optimal use of resources and time.'
+      'Supported the development of innovative methods for virus production and purification.',
+      'Operated virus laboratory and analysis instruments, ensuring accurate experimental data.',
+      'Coordinated laboratory operations and documentation, including SOP updates.',
+      'Managed laboratory inventory and coordinated with internal and external partners.',
+      'Trained and supervised internship students in laboratory protocols and safety practices.',
+      'Assisted in scheduling and coordinating experiments for optimal resource utilization.'
     ]
   },
   {
@@ -162,45 +156,41 @@ const workExperience = ref([
     company: 'Jiangsu Alpha Pharmaceutical Co., Ltd.',
     period: '11.2013 - 09.2015',
     responsibilities: [
-      'Contributed to three patents, providing support in research and development efforts (non-primary inventor).',
-      'Coordinated multiple projects, managing timelines, communication, and documentation across various departments.',
-      'Planned and organized project schedules, ensuring alignment with project goals and deadlines.',
-      'Prepared and managed project documentation, including progress reports, financial reports, and final reports.',
-      'Delivered presentations and reports to responsible departments and stakeholders, ensuring effective communication of project status.',
-      'Organized meetings and discussions with project teams, investors, external testers, and officials, facilitating collaboration and decision-making.',
-      'Monitored deadlines, tracked progress, and provided feedback to ensure project milestones were achieved on time.'
+      'Coordinated multiple biotech projects, managing timelines and communication.',
+      'Contributed to three patents, providing support in research and development efforts.',
+      'Prepared and managed project documentation, including progress reports.',
+      'Organized meetings and discussions with project teams and stakeholders.',
+      'Monitored project deadlines and tracked progress to ensure timely milestone achievement.'
     ]
-  },
-  // Add more work experiences as needed
+  }
 ])
 
 const professionalInterests = ref([
   { 
-    name: 'Bioprocess Engineering',
-    icon: '🧫',
-    description: 'Optimizing bioprocesses for sustainable production of biopharmaceuticals and viral vectors.'
+    name: 'Programming',
+    icon: '💻',
+    description: 'Learning various programming languages and applying them to create practical applications.'
   },
   { 
-    name: 'Programming in Research',
-    icon: '👨‍💻',
-    description: 'Applying programming skills to enhance data analysis and automation in bioprocess research.'
-  },
-  { 
-    name: 'AI Applications in Biotech',
+    name: 'AI Applications',
     icon: '🤖',
-    description: 'Exploring AI potential in bioprocess optimization and predictive modeling for virus production.'
+    description: 'Exploring the potential of AI in various fields and understanding its practical implementations.'
+  },
+  { 
+    name: 'Web Development',
+    icon: '🌐',
+    description: 'Building skills in web development to create functional and user-friendly websites.'
   },
   {
-    name: 'Virus Production & Purification',
-    icon: '🦠',
-    description: 'Developing and improving methods for efficient virus production and purification in bioreactors.'
+    name: 'Social Media Tools',
+    icon: '📱',
+    description: 'Developing social media applications as a way to practice and apply coding and AI concepts.'
   }
 ])
 
 const socialLinks = ref([
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/qing-wang-02aa77140/', icon: '🔗' },
   { name: 'GitHub', url: 'https://github.com/NormyWang', icon: '🐙' },
-  { name: 'ORCID', url: 'https://orcid.org/your-orcid-id', icon: '🆔' },
   { name: 'Twitter', url: 'https://twitter.com/your-twitter-handle', icon: '🐦' },
 ])
 
