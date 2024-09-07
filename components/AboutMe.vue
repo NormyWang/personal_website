@@ -6,8 +6,8 @@
         <img src="/my-picture.jpg" alt="Normy Wang" class="rounded-full w-32 h-32 mr-8">
         <div>
           <h1 class="text-4xl font-bold text-indigo-900 mb-2">Normy Wang</h1>
-          <p class="text-lg text-indigo-700 mb-4">Pharma & Biotech Professional, Aspiring Coder and AI Enthusiast, Culinary Explorer</p>
-          <p class="text-md text-indigo-600 max-w-2xl">Bridging the gap between bioprocess engineering and modern programming techniques to drive innovation in sustainable technologies.</p>
+          <p class="text-lg text-indigo-700 mb-4">Pharma & Biotech Professional, Aspiring Coder and AI Enthusiast</p>
+          <p class="text-md text-indigo-600 max-w-2xl">Leveraging bioprocess engineering expertise while learning modern coding and AI techniques to explore innovations in virus research and sustainable biotech solutions.</p>
         </div>
       </div>
     </div>
@@ -16,7 +16,10 @@
       <section id="Background" class="mb-12 bg-white bg-opacity-75 rounded-lg shadow-lg p-8 transition-all hover:shadow-xl">
         <h2 class="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">Background</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">
-          As a chemical engineer specializing in bioprocess engineering, I've contributed to groundbreaking research in sustainable biofuel production. My experience spans from advanced laboratory techniques to complex data analysis. Currently, I'm leveraging my analytical mindset to explore the intersection of chemical engineering and modern programming, with a focus on applying AI techniques to optimize bioprocesses.
+          I completed my master's in Chemical Energy Engineering, but my career took a different path. After my studies, I worked as a technical assistant at a Virus Research Institute, where I specialized in laboratory techniques, focusing on the development and purification of virus production methods. My work involved hands-on experience in various biotechnological processes, particularly in viral research.
+        </p>
+        <p class="mb-6 text-gray-700 leading-relaxed">
+          Currently, I am learning coding and exploring bioinformatics, with a strong interest in integrating AI tools to enhance research efficiency. My future goal is to combine my experience in virus research with my growing programming skills to contribute to innovative biotech solutions, focusing on sustainable technologies and advancements in the pharmaceutical field.
         </p>
       </section>
       
@@ -61,8 +64,13 @@
           <h3 class="text-xl font-medium text-indigo-600">{{ job.title }}</h3>
           <p class="text-sm text-gray-600">{{ job.company }} | {{ job.period }}</p>
           <ul class="list-disc list-inside mt-2 text-gray-700">
-            <li v-for="responsibility in job.responsibilities" :key="responsibility">{{ responsibility }}</li>
+            <li v-for="(responsibility, index) in job.responsibilities" :key="index" v-show="index < 3 || showAll[job.title]">
+              {{ responsibility }}
+            </li>
           </ul>
+          <button v-if="job.responsibilities.length > 3" @click="toggleShowAll(job.title)" class="mt-2 text-indigo-600 hover:text-indigo-800">
+            {{ showAll[job.title] ? 'Show less' : 'Show more' }}
+          </button>
         </div>
       </section>
 
@@ -83,9 +91,11 @@
       <section id="Future" class="mt-12 bg-white rounded-lg shadow-lg p-8 transition-all hover:shadow-xl">
         <h2 class="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">Future Goals</h2>
         <p class="text-gray-700 leading-relaxed">
-          My aim is to further integrate AI and machine learning techniques into bioprocess engineering, 
-          focusing on developing predictive models for process optimization. I'm also keen on exploring 
-          the potential of synthetic biology in creating sustainable alternatives to traditional chemical processes.
+          My aim is to further integrate AI and machine learning techniques into bioinformatics and virus research, 
+          focusing on developing predictive models for genomic data analysis and virus-host interactions. I'm keen on 
+          exploring the potential of computational biology in enhancing our understanding of viral mechanisms and 
+          accelerating the development of antiviral strategies. Additionally, I aspire to contribute to the field of 
+          personalized medicine by leveraging bioinformatics tools to analyze large-scale biological datasets.
         </p>
       </section>
     </div>
@@ -103,7 +113,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 
 const sections = ['About', 'Background', 'Education', 'Skills', 'Experience', 'Interests', 'Future']
 
@@ -111,12 +121,12 @@ const education = ref([
   { 
     title: 'MSc in Chemical Energy & Engineering',
     institution: 'OVGU - Die Otto-von-Guericke-Universität Magdeburg',
-    year: '2020 - 2022'
+    year: '2015 - 2018'
   },
   { 
     title: 'BSc in Pharmaceutical Engineering',
     institution: 'Southeast University Chengxian College',
-    year: '2015 - 2019'
+    year: '2009 - 2013'
   }
 ])
 
@@ -124,19 +134,41 @@ const skills = ref([
   { name: 'Chemical Engineering', level: 80, icon: '🧪' },
   { name: 'Bioprocess Research', level: 90, icon: '🧬' },
   { name: 'Laboratory Techniques', level: 90, icon: '🔬' },
-  { name: 'Prompt Engineering', level: 80, icon: '📝' },
+  { name: 'Virus Production & Purification', level: 85, icon: '🦠' },
+  { name: 'Project Coordination', level: 75, icon: '📊' },
+  { name: 'SOP Documentation', level: 80, icon: '📝' },
+  { name: 'Prompt Engineering', level: 70, icon: '🤖' },
   { name: 'Programming', level: 50, icon: '💻' },
 ])
 
 const workExperience = ref([
   {
-    title: 'Research Assistant',
-    company: 'Bioprocess Engineering Lab, OVGU',
-    period: 'Jan 2021 - Present',
+    title: 'Technical Assistant (Research Assistant)',
+    company: 'Max Planck Institute for Dynamics of Complex Technical Systems Magdeburg',
+    period: '10.2019 – 05.2023',
     responsibilities: [
-      'Conduct experiments on sustainable biofuel production',
-      'Analyze and interpret complex datasets using Python',
-      'Collaborate with interdisciplinary teams on cutting-edge research projects'
+      'Supported the development of innovative methods for virus production and purification, working on both upstream and downstream processes.',
+      'Operated virus laboratory and analysis instruments, ensuring accurate experimental data and results.',
+      'Coordinated laboratory cleaning and testing requirements, liaising with internal teams and external partners.',
+      'Assisted in drafting and updating Standard Operating Procedures (SOPs) and other essential laboratory documentation.',
+      'Managed laboratory inventory, including ordering necessary equipment, consumables, and office supplies.',
+      'Provided guidance and supervision to internship students, ensuring smooth lab integration and understanding of procedures.',
+      'Trained new colleagues in laboratory protocols and safety practices, ensuring a well-organized and efficient working environment.',
+      'Collaborated with internal and external partners to schedule and coordinate experiments, ensuring optimal use of resources and time.'
+    ]
+  },
+  {
+    title: 'Project Coordinator',
+    company: 'Jiangsu Alpha Pharmaceutical Co., Ltd.',
+    period: '11.2013 - 09.2015',
+    responsibilities: [
+      'Contributed to three patents, providing support in research and development efforts (non-primary inventor).',
+      'Coordinated multiple projects, managing timelines, communication, and documentation across various departments.',
+      'Planned and organized project schedules, ensuring alignment with project goals and deadlines.',
+      'Prepared and managed project documentation, including progress reports, financial reports, and final reports.',
+      'Delivered presentations and reports to responsible departments and stakeholders, ensuring effective communication of project status.',
+      'Organized meetings and discussions with project teams, investors, external testers, and officials, facilitating collaboration and decision-making.',
+      'Monitored deadlines, tracked progress, and provided feedback to ensure project milestones were achieved on time.'
     ]
   },
   // Add more work experiences as needed
@@ -146,18 +178,23 @@ const professionalInterests = ref([
   { 
     name: 'Bioprocess Engineering',
     icon: '🧫',
-    description: 'Optimizing bioprocesses for sustainable production of chemicals and materials.'
+    description: 'Optimizing bioprocesses for sustainable production of biopharmaceuticals and viral vectors.'
   },
   { 
     name: 'Programming in Research',
     icon: '👨‍💻',
-    description: 'Leveraging programming skills to enhance data analysis and automation in scientific research.'
+    description: 'Applying programming skills to enhance data analysis and automation in bioprocess research.'
   },
   { 
-    name: 'AI Applications',
+    name: 'AI Applications in Biotech',
     icon: '🤖',
-    description: 'Exploring AI potential in various fields of chemical engineering and bioprocessing.'
+    description: 'Exploring AI potential in bioprocess optimization and predictive modeling for virus production.'
   },
+  {
+    name: 'Virus Production & Purification',
+    icon: '🦠',
+    description: 'Developing and improving methods for efficient virus production and purification in bioreactors.'
+  }
 ])
 
 const socialLinks = ref([
@@ -166,6 +203,12 @@ const socialLinks = ref([
   { name: 'ORCID', url: 'https://orcid.org/your-orcid-id', icon: '🆔' },
   { name: 'Twitter', url: 'https://twitter.com/your-twitter-handle', icon: '🐦' },
 ])
+
+const showAll = reactive({})
+
+const toggleShowAll = (jobTitle) => {
+  showAll[jobTitle] = !showAll[jobTitle]
+}
 </script>
 
 <style scoped>

@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   apollo: {
     clients: {
       default: {
-        httpEndpoint: 'http://localhost:4000/graphql',
+        httpEndpoint: process.env.GRAPHQL_ENDPOINT || 'http://localhost:4000/graphql',
       },
     },
   },
@@ -22,8 +22,36 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-07-22',
 
-  // Add this section
   vite: {
     assetsInclude: ['**/*.jpeg', '**/*.jpg', '**/*.png', '**/*.svg'],
+    build: {
+      assetsInlineLimit: 4096,
+    },
+    server: {
+      fs: {
+        strict: false
+      }
+    }
+  },
+
+  ssr: true,
+
+  runtimeConfig: {
+    public: {
+      apiBase: process.env.API_BASE || 'http://localhost:4000'
+    }
+  },
+
+  build: {
+    transpile: ['@apollo/client', '@vue/apollo-composable']
+  },
+
+  debug: process.env.NODE_ENV !== 'production',
+
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/']
+    }
   },
 })
