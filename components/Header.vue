@@ -19,9 +19,6 @@ import { ref } from 'vue'
 
 const navLinks = ref({
   Home: '/',
-  About: '/about',
-  Projects: '/projects',
-  Cooking: '/cooking',
   'Living in Germany': '/germany',
   FAQ: '/FAQ'
 })
